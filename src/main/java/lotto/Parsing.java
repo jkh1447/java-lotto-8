@@ -12,7 +12,7 @@ public class Parsing {
     public static int parsingMoney(String money) {
         validateMoney(money);
         return Integer.parseInt(money);
-        
+
     }
 
     public static int parsingBonusNumber(String num) {
