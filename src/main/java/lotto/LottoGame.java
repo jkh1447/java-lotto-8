@@ -22,6 +22,7 @@ public class LottoGame {
         output.printInputBonusNumbers();
         int bonus = readBonusNumber();
 
+        List<LottoRank> lottoResults = LottoChecker.lottoCheck(lottos, winningNumbers, bonus);
 
 
     }

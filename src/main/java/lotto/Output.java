@@ -1,6 +1,7 @@
 package lotto;
 
 import java.util.List;
+import java.util.Map;
 
 public class Output {
 
@@ -30,5 +31,23 @@ public class Output {
         for (Lotto lotto : lottos) {
             System.out.println(lotto);
         }
+    }
+
+    public static final String LOTTO_RESULT_MESSAGE = "당첨 통계\n";
+    public static final String LINE_MESSAGE = "---\n";
+    public static final String FIFTH_MESSAGE = "3개 일치 (5,000원) - %d개\n";
+    public static final String FORTH_MESSAGE = "4개 일치 (50,000원) - %d개\n";
+    public static final String THIRD_MESSAGE = "5개 일치 (1,500,000원) - %d개\n";
+    public static final String SECOND_MESSAGE = "5개 일치, 보너스 볼 일치 (30,000,000원) - %d개\n";
+    public static final String FIRST_MESSAGE = "6개 일치 (2,000,000,000원) - %d개\n";
+
+    public void printLottoResults(Map<String, Integer> lottoResults) {
+        System.out.println(LOTTO_RESULT_MESSAGE);
+        System.out.println(LINE_MESSAGE);
+        System.out.printf(FIFTH_MESSAGE, lottoResults.get("FIFTH"));
+        System.out.printf(FORTH_MESSAGE, lottoResults.get("FORTH"));
+        System.out.printf(THIRD_MESSAGE, lottoResults.get("THIRD"));
+        System.out.printf(SECOND_MESSAGE, lottoResults.get("SECOND"));
+        System.out.printf(FIRST_MESSAGE, lottoResults.get("FIRST"));
     }
 }
