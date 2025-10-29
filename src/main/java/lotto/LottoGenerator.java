@@ -6,9 +6,9 @@ import java.util.List;
 
 public class LottoGenerator {
 
-    private final int LOTTO_PRICE = 1000;
+    private static final int LOTTO_PRICE = 1000;
 
-    public List<Lotto> generateLotto(int money) {
+    public static List<Lotto> generateLotto(int money) {
         List<Lotto> lottos = new ArrayList<>();
         int lottoAmount = money / LOTTO_PRICE;
 

@@ -3,6 +3,7 @@ package lotto;
 import java.util.List;
 
 public class Lotto {
+    private final int LOTTO_NUMBER = 6;
     private final List<Integer> numbers;
 
     public Lotto(List<Integer> numbers) {
@@ -16,5 +17,21 @@ public class Lotto {
         }
     }
 
-    // TODO: 추가 기능 구현
+    public LottoRank checkLotto(List<Integer> winningNumbers, int bonus) {
+        int matchCount = 0;
+        boolean isBonus = false;
+
+        for (int num : numbers) {
+            if (winningNumbers.contains(num)) {
+                matchCount++;
+            }
+        }
+
+        if (numbers.contains(bonus)) {
+            matchCount++;
+            isBonus = true;
+        }
+
+        return LottoRank.of(matchCount, isBonus);
+    }
 }

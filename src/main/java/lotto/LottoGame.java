@@ -6,13 +6,12 @@ public class LottoGame {
 
     Input input = new Input();
     Output output = new Output();
-    LottoGenerator lottoGenerator = new LottoGenerator();
 
     private void run() {
         output.printInputMoney();
         int money = readMoney();
 
-        List<Lotto> lottos = lottoGenerator.generateLotto(money);
+        List<Lotto> lottos = LottoGenerator.generateLotto(money);
         output.printBuyMessage(lottos.size());
         output.printLottos(lottos);
 
@@ -22,7 +21,7 @@ public class LottoGame {
         output.printInputBonusNumbers();
         int bonus = readBonusNumber();
 
-        
+
 
 
     }
