@@ -1,5 +1,6 @@
 package lotto;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class LottoGame {
@@ -22,40 +23,59 @@ public class LottoGame {
         int bonus = readBonusNumber();
 
 
-
-
+        
     }
 
     public int readMoney() {
         while(true) {
-            try{
-                String moneyStr = input.InputMoney();
-                int money = Parsing.parsingMoney(moneyStr);
-            } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage());
-            }
+            String moneyStr = input.InputMoney();
+            int money = parseMoney(moneyStr);
+            if(money != -1) { return money; }
+        }
+    }
+
+    private int parseMoney(String moneyStr) {
+        try {
+            return Parsing.parsingMoney(moneyStr);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+            return -1;
         }
     }
 
     public List<Integer> readWinningNumbers() {
         while(true) {
-            try{
-                String winningStr = input.InputWinningNumbers();
-                return Parsing.parsingWinningNumbers(winningStr);
-            } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage());
+            String winningNumberStr = input.InputWinningNumbers();
+            List<Integer> winningNumbers = parseWinningNumbers(winningNumberStr);
+            if (winningNumbers != null) {
+                return winningNumbers;
             }
+        }
+    }
+
+    public List<Integer> parseWinningNumbers(String winningStr) {
+        try {
+            return Parsing.parsingWinningNumbers(winningStr);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+            return null;
         }
     }
 
     public int readBonusNumber() {
         while(true) {
-            try{
-                String bonusStr = input.InputBonusNumbers();
-                return Parsing.parsingBonusNumber(bonusStr);
-            } catch (IllegalArgumentException e) {
-                System.out.println(e.getMessage());
-            }
+            String bonusNumberStr =  input.InputBonusNumbers();
+            int bonusNumber = parseBonusNumber(bonusNumberStr);
+            if(bonusNumber != -1) { return bonusNumber; }
+        }
+    }
+
+    public int parseBonusNumber(String bonusStr) {
+        try {
+            return Parsing.parsingBonusNumber(bonusStr);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+            return -1;
         }
     }
 }
