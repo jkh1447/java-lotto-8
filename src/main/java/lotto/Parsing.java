@@ -30,7 +30,7 @@ public class Parsing {
 
     private static void validateWinningNumbers(String winningNumbersStr) {
         if (!winningNumbersStr.matches(WINNING_NUMBERS_PATTERN)) {
-            throw new IllegalArgumentException("당첨번호는 콤마(,)로 구분되며, 6자리여야 합니다.");
+            throw new IllegalArgumentException("[ERROR] 당첨번호는 콤마(,)로 구분되며, 6자리여야 합니다.");
         }
     }
 
@@ -38,7 +38,7 @@ public class Parsing {
         try {
             Integer.parseInt(bonusNumbersStr);
         } catch (NumberFormatException e) {
-            throw new IllegalArgumentException("보너스 번호는 숫자여야만 합니다.");
+            throw new IllegalArgumentException("[ERROR] 보너스 번호는 숫자여야만 합니다.");
         }
     }
 
@@ -47,11 +47,11 @@ public class Parsing {
         try {
             money = Integer.parseInt(moneyStr);
         } catch (NumberFormatException e) {
-            throw new IllegalArgumentException("구입금액은 숫자여야만 합니다.");
+            throw new IllegalArgumentException("[ERROR] 구입금액은 숫자여야만 합니다.");
         }
 
         if (money < 0 || money % 1000 != 0) {
-            throw new IllegalArgumentException("구입금액은 1000원 단위여야만 합니다.");
+            throw new IllegalArgumentException("[ERROR] 구입금액은 1000원 단위여야만 합니다.");
         }
     }
 
