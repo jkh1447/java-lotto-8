@@ -17,6 +17,10 @@ public class Lotto {
         }
     }
 
+    public List<Integer> getNumbers() {
+        return numbers;
+    }
+
     public LottoRank checkLotto(List<Integer> winningNumbers, int bonus) {
         int matchCount = 0;
         boolean isBonus = false;

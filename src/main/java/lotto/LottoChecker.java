@@ -17,6 +17,9 @@ public class LottoChecker {
 
     public static Map<String, Integer> countLottoMatches(List<LottoRank> lottoResults) {
         Map<String, Integer> rankCounts = new HashMap<>();
+        for(LottoRank rank: LottoRank.values()) {
+            rankCounts.put(rank.name(), 0);
+        }
 
         for (LottoRank lottoRank : lottoResults) {
             rankCounts.put(lottoRank.name(), rankCounts.get(lottoRank.name()) + 1);

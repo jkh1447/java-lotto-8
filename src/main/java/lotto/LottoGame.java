@@ -8,7 +8,7 @@ public class LottoGame {
     Input input = new Input();
     Output output = new Output();
 
-    private void run() {
+    public void run() {
         output.printInputMoney();
         int money = readMoney();
 
