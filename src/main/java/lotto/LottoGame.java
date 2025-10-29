@@ -24,6 +24,8 @@ public class LottoGame {
 
         List<LottoRank> lottoResults = LottoChecker.lottoCheck(lottos, winningNumbers, bonus);
 
+        output.printLottoResults(LottoChecker.countLottoMatches(lottoResults));
+        output.printLottoYield(LottoChecker.calculateYield(lottoResults, money));
 
     }
 

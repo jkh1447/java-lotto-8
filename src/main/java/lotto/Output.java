@@ -50,4 +50,10 @@ public class Output {
         System.out.printf(SECOND_MESSAGE, lottoResults.get("SECOND"));
         System.out.printf(FIRST_MESSAGE, lottoResults.get("FIRST"));
     }
+
+    public static final String LOTTO_YIELD_MESSAGE = "총 수익률은 %f%%입니다.";
+
+    public void printLottoYield(double yield) {
+        System.out.printf(LOTTO_YIELD_MESSAGE, yield);
+    }
 }
