@@ -23,7 +23,7 @@ public class LottoGame {
         int bonus = readBonusNumber();
 
 
-        
+
     }
 
     public int readMoney() {

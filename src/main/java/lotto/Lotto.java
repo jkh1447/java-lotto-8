@@ -28,7 +28,6 @@ public class Lotto {
         }
 
         if (numbers.contains(bonus)) {
-            matchCount++;
             isBonus = true;
         }
 

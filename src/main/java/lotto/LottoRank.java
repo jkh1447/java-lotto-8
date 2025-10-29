@@ -25,8 +25,8 @@ public enum LottoRank {
     }
 
     public static LottoRank of(int match, boolean bonus) {
-        if (match == 6 && bonus) return SECOND;
         if (match == 6) return FIRST;
+        if (match == 5 && bonus) return SECOND;
         if (match == 5) return THIRD;
         if (match == 4) return FOURTH;
         if (match == 3) return FIFTH;
