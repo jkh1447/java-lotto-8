@@ -32,7 +32,7 @@ public class LottoChecker {
             prizeSum += lottoRank.getPrize();
         }
 
-        double yield = (double) Math.round((prizeSum * 10 / money) * 10) / 10;
+        double yield = (double) Math.round((prizeSum * 100 / money) * 10) / 10;
         return yield;
     }
 }
