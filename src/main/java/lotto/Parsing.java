@@ -30,7 +30,7 @@ public class Parsing {
 
     private static void validateWinningNumbers(String winningNumbersStr) {
         if (!winningNumbersStr.matches(WINNING_NUMBERS_PATTERN)) {
-            throw new IllegalArgumentException("[ERROR] 당첨번호는 콤마(,)로 구분되며, 6자리여야 합니다.");
+            throw new IllegalArgumentException("[ERROR] 당첨번호는 콤마(,)로 구분되며, 6자리여야 합니다. (공백X)");
         }
     }
 
