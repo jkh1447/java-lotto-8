@@ -1,7 +1,13 @@
-package lotto;
+package lotto.controller;
 
-import java.util.Arrays;
 import java.util.List;
+import lotto.view.Input;
+import lotto.domain.Lotto;
+import lotto.domain.LottoChecker;
+import lotto.domain.LottoGenerator;
+import lotto.domain.LottoRank;
+import lotto.view.Output;
+import lotto.view.Parsing;
 
 public class LottoGame {
 

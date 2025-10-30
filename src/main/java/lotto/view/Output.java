@@ -1,7 +1,8 @@
-package lotto;
+package lotto.view;
 
 import java.util.List;
 import java.util.Map;
+import lotto.domain.Lotto;
 
 public class Output {
 
